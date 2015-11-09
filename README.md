@@ -6,8 +6,7 @@ and thought it would be fun to implement a **very** simple compiler.
 That's what this is.
 
 ## Building it
-Get Flex and Bison, and GCC or clang.
-Then, just run `make`.
+Get Clojure and Leiningen. Do `lein run` to run the compiler.
 
 ## License:
 Zed: a very simple compiler

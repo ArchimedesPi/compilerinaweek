@@ -1,61 +1,16 @@
-### C ###
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
-
-# IR and Depfiles
-*.d
-
-# Generated files
-*.yy.c
-*.tab.c
-*.tab.h
-parser.h
-parser.c
-lexer.h
-lexer.c
-
-# Coverity
-cov-int/
-zed.bz2
-
-# Coredumps
-core
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-zed
-lextest
-
-# Debug files
-*.dSYM/
-
-### Zed ###
-*.zd.ir.c
-
+### Clojure ###
+pom.xml
+pom.xml.asc
+*jar
+/lib/
+/classes/
+/target/
+/checkouts/
+.lein-deps-sum
+.lein-repl-history
+.lein-plugins/
+.lein-failures
+.nrepl-port
 
 ### Linux ###
 *~

@@ -1,0 +1,33 @@
+program = (whitespace? statement <';'> whitespace?)*
+
+statement = bind | expression;
+bind = identifier whitespace? <'='> whitespace? expression;
+
+expression = number | string | vector | identifier | lambda | op | (<'('> expression <')'>)
+
+(* operations *)
+<op> = binary-op (* general op *)
+binary-op = expression whitespace? operator whitespace? expression
+
+(* kinds of operators *)
+<arithmetic_op> = '+' | '-' | '*' | '/' | '^'
+<datastream_op> = '|>'
+(* compose operators *)
+operator = arithmetic_op | datastream_op
+
+(* data structures *)
+vector = <'['> (expression|whitespace)* <']'>
+lambda = <'lambda'> whitespace? <'['> arguments <']'> whitespace? <'{'> (whitespace? statement <';'> whitespace?)* <'}'>
+
+(* helpers *)
+arguments = (whitespace? argument whitespace?)*
+argument = type <'/'> identifier
+
+(* raw atomic things *)
+type = #'[A-Z][A-Za-z]*'
+identifier = #'[A-Za-z_]+'
+number = #'[0-9.]+'
+string = <'\''> #'[^\']*' <'\''>
+
+(* utilities *)
+<whitespace> = <#'\s+'>

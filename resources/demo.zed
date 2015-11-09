@@ -1,0 +1,3 @@
+main = lambda[String~/args] -> {
+     map(args, println);
+};

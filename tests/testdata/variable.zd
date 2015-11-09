@@ -1,6 +1,0 @@
-use <stdio>;
-
-fn main {
-	double aValue = 2.0;
-	printf("%f", aValue);
-};
